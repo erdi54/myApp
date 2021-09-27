@@ -4,6 +4,7 @@ import style from './styles'
 import Icon from "react-native-vector-icons/FontAwesome5";
 import {Formik} from "formik";
 import * as Yup from 'yup';
+import MainStore from "../../../Store/MainStore";
 
 export default class Login extends React.Component {
     constructor() {
@@ -11,6 +12,10 @@ export default class Login extends React.Component {
         this.state = {
             hidePassword: true
         }
+    }
+
+    componentDidMount() {
+        alert(MainStore.getName())
     }
     _handleSubmit = () =>{
          alert('Form Post Edildi')
